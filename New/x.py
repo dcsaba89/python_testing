@@ -6,16 +6,7 @@ ARGS = sys.argv[1:]
 
 def ranger(n):
     if str(n).isnumeric():
-        i = 0
-        a = []
-        while i < 2*n:
-            if i % 2 == 0:
-                a.append(np.int(i/2))
-                i += 1
-            else:
-                i -= 1
-            i += 1
-        return np.array(a)
+        return range(np.int(n))
     else:
         raise ValueError("Pass exactly one integer argument")
 
